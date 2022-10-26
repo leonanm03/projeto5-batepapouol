@@ -15,11 +15,28 @@
 
 <body>
     <main>
-        mensagens e notificações
         <header>
             <img class="logo" src="./figs/logo 1.png">
             <ion-icon name="people"></ion-icon>
         </header>
+
+        <ul>
+            <li class="access-alert">
+                <p><span class="timestamp">(timestamp)</span> <strong class="user-access">Fulano</strong> [entra
+                    na]/[sai da] sala...</p>
+            </li>
+
+            <li class="msg-all">
+                <p><span class="timestamp">(timestamp)</span> <strong class="sender">Fulano</strong> para <strong
+                        class="receiver">Ciclano</strong></p>: "mensagem"
+            </li>
+
+            <li class="msg-private">
+                <p><span class="timestamp">(timestamp)</span> <strong class="sender">Fulano</strong> para <strong class="receiver">Ciclano</strong></p>: "mensagem" 
+
+            </li>
+        </ul>
+
         <footer>
             <input placeholder="Escreva aqui..." type="text">
             <ion-icon name="paper-plane-outline"></ion-icon>

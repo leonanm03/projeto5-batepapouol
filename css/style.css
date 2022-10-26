@@ -9,6 +9,7 @@
 body {
     background-color: gray;
     width: 375px;
+    height: 667px;
     margin: auto;
 }
 
@@ -33,6 +34,10 @@ header {
 header>ion-icon {
     font-size: 42px;
 }
+
+/* Barra superior */
+
+
 
 /* Barra inferior */
 footer {
@@ -63,6 +68,10 @@ footer>input:focus {
     outline: 0;
 }
 
+footer>input::placeholder {
+    color: black;
+}
+
 footer>input:focus::placeholder {
     color: transparent;
 }
@@ -71,9 +80,49 @@ footer>ion-icon {
     font-size: 26px;
 }
 
+/* barra inferior */
+
+
+
 /* conteúdo principal */
 main {
     margin: 80px 0;
+    padding-top: 24px;
     width: 100%;
+    height: 100%;
     background-color: #F3F3F3;
+}
+
+main>ul>li {
+    width: 100%;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 12px 8px;
+    margin: 4px 0;
+}
+
+.access-alert {
+    background: #DCDCDC;
+}
+
+.msg-all {
+    background-color: white;
+}
+
+.msg-private {
+    background: #FFDEDE;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.timestamp {
+    color: #AAAAAA;
 }
