@@ -7,9 +7,9 @@
 }
 
 body {
-    background-color: gray;
+    background-color: #F3F3F3;
     width: 375px;
-    height: 667px;
+    height: 100%;
     margin: auto;
 }
 
@@ -64,8 +64,7 @@ footer>input {
 }
 
 footer>input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
+    outline: none;
 }
 
 footer>input::placeholder {
@@ -90,7 +89,6 @@ main {
     padding-top: 24px;
     width: 100%;
     height: 100%;
-    background-color: #F3F3F3;
 }
 
 main>ul>li {
