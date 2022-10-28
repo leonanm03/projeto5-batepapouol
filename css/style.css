@@ -78,6 +78,9 @@ footer>input:focus::placeholder {
 footer>ion-icon {
     font-size: 26px;
 }
+footer>ion-icon:hover {
+    cursor:pointer;    
+}
 
 /* barra inferior */
 
