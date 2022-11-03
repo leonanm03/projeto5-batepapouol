@@ -48,7 +48,7 @@ function connectionKept(sucess) {
 function connectionError(error) {
     console.log(error.response.status);
     alert("conexão perdida, recarregando página");
-    setTimeout(window.location.reload, 100);
+    setTimeout(window.location.reload(), 100);
 }
 // MANTENDO CONEXÃO
 
@@ -79,16 +79,16 @@ function renderMessages() {
     for (let i = 0; i < messages.length; i++) {
         let message = messages[i];
         if (message.type === "status") {
-            ulMessages.innerHTML += `<li class="access-alert"><p><span class="timestamp">(${message.time}) </span> <strong class="user-access">${message.from} </strong>${message.text}</p></li>`
+            ulMessages.innerHTML += `<li data-test="message" class="access-alert"><p><span class="timestamp">(${message.time}) </span> <strong class="user-access">${message.from} </strong>${message.text}</p></li>`
 
         }
         else if (message.type === "message") {
-            ulMessages.innerHTML += `<li class="msg-all"><p><span class="timestamp">(${message.time}) </span> <strong class="sender">${message.from}</strong> para <strong class="receiver">${message.to}</strong>: ${message.text}</p></li>`
+            ulMessages.innerHTML += `<li data-test="message" class="msg-all"><p><span class="timestamp">(${message.time}) </span> <strong class="sender">${message.from}</strong> para <strong class="receiver">${message.to}</strong>: ${message.text}</p></li>`
 
         }
         else if (message.type === "private_message") {
             if (message.from === user.name || message.to === user.name) {
-                ulMessages.innerHTML += `<li class="msg-private"><p><span class="timestamp">(${message.time})</span> <strong class="sender">${message.from}</strong> para <strong class="receiver">${message.to}</strong>: ${message.text}</p></li>`
+                ulMessages.innerHTML += `<li data-test="message" class="msg-private"><p><span class="timestamp">(${message.time})</span> <strong class="sender">${message.from}</strong> para <strong class="receiver">${message.to}</strong>: ${message.text}</p></li>`
 
             }
         }
